@@ -102,7 +102,7 @@ public class Main {
     }
 
     /**
-     *
+     * Добавлено требование для второй задачи 
      * @return int array
      */
     public static int[] fillArrayV2() {
