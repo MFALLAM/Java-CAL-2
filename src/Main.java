@@ -23,7 +23,7 @@ public class Main {
 
         // 2. Задача
         int[] numArray = new int[8];
-        int[] toArray = {0,3,6,9,12,15,18,21};
+        int[] toArray = {0, 3, 6, 9, 12, 15, 18, 21};
 
         // Dumping out before
         //System.out.println("Before " +Arrays.toString(numArray));
@@ -34,13 +34,16 @@ public class Main {
             //System.out.println(resultNumV1[i]);
         }
 
+        int[] resultNumV2 = fillArrayV2();
+        //System.out.println(Arrays.toString(resultNumV2));
+
         // Dumping out after
         //System.out.println("After " +Arrays.toString(numArray));
 
         // 2. Конец Задача ---------------------------------------------------------
 
         // 3. Задача
-        int[] fake = {1,5,3,2,11,4,5,2,4,8,9,1};
+        int[] fake = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         //printingV1(fake);
 
         int[] resultFake = printingV2(fake);
@@ -53,7 +56,7 @@ public class Main {
         // 4. Конец Задача ---------------------------------------------------------
 
         // 5. Задача
-        int[] array = {12,33,50, 65, 70, 80 ,100};
+        int[] array = {12, 33, 50, 65, 70, 80, 100};
         // 5. Конец Задача ---------------------------------------------------------
     }
 
@@ -63,7 +66,7 @@ public class Main {
      * @param array int onesZeros
      * @return array int
      */
-    public static int[] replacingV1 (int[] onesZeros) {
+    public static int[] replacingV1(int[] onesZeros) {
         int[] replaced = new int[onesZeros.length];
         for (int i = 0; i < onesZeros.length; i++) {
             replaced[i] = (onesZeros[i] == 1) ? 0 : 1;
@@ -77,7 +80,7 @@ public class Main {
      * @param array int onesZeros
      * @return array int
      */
-    public static int[] replacingV2 (int[] onesZeros) {
+    public static int[] replacingV2(int[] onesZeros) {
         for (int i = 0; i < onesZeros.length; i++) {
             onesZeros[i] = (onesZeros[i] == 1) ? 0 : 1;
         }
@@ -86,25 +89,39 @@ public class Main {
 
     /**
      * 2. Задача - вариант 1
+     *
      * @param array numArray
      * @param array toArray
      * @return int array
      */
     public static int[] fillArrayV1(int[] numArray, int[] toArray) {
-        for (int i = 0; i < numArray.length ; i++) {
+        for (int i = 0; i < numArray.length; i++) {
             numArray[i] = toArray[i];
         }
         return numArray;
     }
 
     /**
+     *
+     * @return int array
+     */
+    public static int[] fillArrayV2() {
+        int[] array = new int[8];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (2 + 1) * i;
+        }
+        return array;
+    }
+
+    /**
      * 3. Задача - вариант 1
+     *
      * @param fake
      * @return void
      */
     public static void printingV1(int[] fake) {
         for (int i = 0; i < fake.length; i++) {
-            if(fake[i] < 6) {
+            if (fake[i] < 6) {
                 System.out.println("found " + fake[i] + " x 2 =" + "  " + (fake[i] *= 2));
             } else {
                 System.out.println("Can not do that..!");
@@ -114,6 +131,7 @@ public class Main {
 
     /**
      * 3. Задача - вариант 2
+     *
      * @param array fake
      * @return int array
      */
@@ -125,14 +143,13 @@ public class Main {
     }
 
     /**
-     *
      * @param int length
      * @return void
      */
-    public static void boxOfColumnsAndRows(int length){
+    public static void boxOfColumnsAndRows(int length) {
         int[][] box = new int[length][length];
-        for(int i = 0; i < length; i++){
-            for(int j = 0; j < length; j++){
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
 
                 box[i][j] = 1;
 
@@ -141,5 +158,5 @@ public class Main {
             System.out.println();
         }
     }
-    
+
 }
