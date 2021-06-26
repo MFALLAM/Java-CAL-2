@@ -102,7 +102,8 @@ public class Main {
     }
 
     /**
-     * Добавлено требование для второй задачи 
+     * 2. Задача - вариант 2
+     * Добавлено требование для второй задачи MF
      * @return int array
      */
     public static int[] fillArrayV2() {
