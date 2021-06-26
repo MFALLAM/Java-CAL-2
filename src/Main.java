@@ -56,7 +56,10 @@ public class Main {
         // 4. Конец Задача ---------------------------------------------------------
 
         // 5. Задача
-        int[] array = {12, 33, 50, 65, 70, 80, 100};
+        int[] arrValues = {50, 65, 70, 80, 100, 101, 2};
+        System.out.println("Max value is "+ Integer.toString(findMax(arrValues)));
+
+        System.out.println("Min value is "+ Integer.toString(findMin(arrValues)));
         // 5. Конец Задача ---------------------------------------------------------
     }
 
@@ -104,6 +107,7 @@ public class Main {
     /**
      * 2. Задача - вариант 2
      * Добавлено требование для второй задачи MF
+     *
      * @return int array
      */
     public static int[] fillArrayV2() {
@@ -144,6 +148,8 @@ public class Main {
     }
 
     /**
+     * 4. Задача - вариант 1
+     *
      * @param int length
      * @return void
      */
@@ -159,5 +165,40 @@ public class Main {
             System.out.println();
         }
     }
+
+    /**
+     * 5. Задача Max
+     *
+     * @param int arrValues
+     * @return int
+     */
+    public static int findMax(int[] arrValues) {
+        int temp = arrValues[0];
+
+        for (int i = 0; i < arrValues.length; i++) {
+            if (temp < arrValues[i]) {
+                temp = arrValues[i];
+            }
+        }
+        return temp;
+    }
+
+    /**
+     * 5. Задача Min
+     *
+     * @param int arrValues
+     * @return int
+     */
+    public static int findMin(int[] arrValues) {
+        int temp = arrValues[0];
+
+        for (int i = 0; i < arrValues.length; i++) {
+            if (temp > arrValues[i]) {
+                temp = arrValues[i];
+            }
+        }
+        return temp;
+    }
+
 
 }
